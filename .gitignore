@@ -1,1 +1,2 @@
 /unit_tests/jest_multiple_tests/node_modules
+/integration_tests/knex/node_modules
