@@ -16,7 +16,7 @@ const getInventory = () => {
         },
         {}
     );
-    return { ...contents, generatedAt: new Date() };
+    return { ...contents, generatedAt: new Date(new Date().setYear(3000)) };
 }
 
 module.exports = { inventory, addToInventory, getInventory };

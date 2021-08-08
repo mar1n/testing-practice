@@ -1,5 +1,4 @@
-module,exports = {
+module.exports = {
     testEnvironment: "node",
-    globalSetup: "./globalSetup.js",
-    globalTeardown: "./globalTeardown.js"
+    setupFilesAfterEnv: ["jest-extended"]
 }

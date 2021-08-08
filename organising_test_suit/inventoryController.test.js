@@ -2,6 +2,12 @@ const { inventory, addToInventory, getInventory } = require("./InventoryControll
 
 beforeEach(() => inventory.clear());
 
+test("generatedAt in the past", () => {
+    const result = getInventory();
+    const currentTime = Date.now() + 1;
+    expect(result.generatedAt).toBeBefore(currentTime);
+})
+
 test("inventory contents", () => {
   inventory
     .set("cheesecake", 1)
