@@ -13,12 +13,6 @@ describe("addItem", () => {
     beforeEach(() => carts.clear());
     beforeEach(() => inventory.set("cheesecake", 1));
 
-    test("correct response", async () => {
-        const addItemResponse = await addItem("lucas", "cheesecake");
-        expect(addItemResponse.status).toBe(200);
-        expect(await addItemResponse.json()).toEqual(["cheesecake"]);
-    });
-
     test("inventory update", async () => {
         await addItem("lucas", "cheesecake");
         expect(inventory.get("cheesecake")).toBe(0);
